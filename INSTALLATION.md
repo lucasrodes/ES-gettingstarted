@@ -24,6 +24,19 @@ First untar the file, then go to the directory `cd elasticsearch-5.0.0`. Next in
 curl -XGET http://localhost:9200/
 ```
 
+### Stop Kibana
+
+Obtain PID of processes running in port 5601
+
+```
+lsof -i:9200
+```
+
+Kill them
+
+```
+kill -KILL <PID>
+```
 
 ## Setting up Kibana
 
@@ -52,7 +65,19 @@ Next, run the file
 Navigate to `http://localhost:5601` in your browser
 
 
-kill:  kill -KILL PID
+### Stop Kibana
+
+Obtain PID of processes running in port 5601
+
+```
+lsof -i:5601
+```
+
+Kill them
+
+```
+kill -KILL <PID>
+```
 
 ##  Setting up Console
 
