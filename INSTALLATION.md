@@ -50,3 +50,11 @@ Next, run the file
 ### Test Kibana
 
 Navigate to `http://localhost:5601` in your browser
+
+
+kill:  kill -KILL PID
+
+##  Setting up Console
+
+* Access Kibana, and go to DevTools.
+

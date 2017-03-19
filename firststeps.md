@@ -3,7 +3,7 @@ This document is based on the fantastic [Elasticsearch Tutorial & Getting Starte
 ### Put new index
 
 ```
-PUT '/ecommerce'
+PUT /ecommerce
 ```
 
 ### Retrieve all indices
@@ -21,11 +21,11 @@ DELETE /ecommerce
 ###  Define the mapping of the index
 
 ```
-PUT /eccomerce
+PUT /ecommerce
 {
   "mappings":{
     "product":{
-      properties": {
+      "properties": {
         "name": {
           "type":"text"
         },
@@ -111,3 +111,14 @@ POST /ecommerce/product/1001/_update
   }
 }
 ```
+
+### Delete document
+
+```
+DELETE /eccomerce/product/1001
+```
+
+By default it is only possible to delete documents by the ID. However, there is a plugin named 'delete by query' which allows to delete documents matching a given query.
+
+### Batch processing
+min:32
